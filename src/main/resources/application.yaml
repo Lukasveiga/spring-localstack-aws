@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: spring-localstack-up
+
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY:devlukas}
+        secret-key: ${AWS_SECRET_KEY:devlukas}
+        profile:
+          name: localstack
+      region:
+        static: us-east-1
+      parameterstore:
+        endpoint: http://localhost:4566
+        region: us-east-1
+      sns:
+        endpoint: http://localhost:4566
+        region: us-east-1
+      s3:
+        endpoint: http://s3.localhost.localstack.cloud:4566/
+        region: us-east-1
+  config:
+    import:
+      - aws-parameterstore:/config/spring-localstack_localstack/
+
