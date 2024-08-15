@@ -14,3 +14,6 @@ aws --endpoint http://localhost:4566 --profile localstack sns subscribe --topic-
 # S3
 aws --endpoint http://localhost:4566 --profile localstack s3 mb s3://helloworld
 
+# Secrets Manager
+aws --endpoint http://localhost:4566 --profile localstack secretsmanager create-secret --name "/secrets/spring-localstack_localstack" --description "Secret Manager Example" --secret-string "{\"valor1\":\"Oi Mundo\",\"valor2\":\"Hello World\",\"valor3\":\"Hola Mundo\"}"
+
