@@ -2,7 +2,7 @@ spring:
   profiles:
     active: prod
   application:
-    name: spring-localstack-up
+    name: spring-localstack
 
   cloud:
     aws:
@@ -22,7 +22,14 @@ spring:
       s3:
         endpoint: http://s3.localhost.localstack.cloud:4566/
         region: us-east-1
+      secretsmanager:
+        endpoint: http://localhost:4566
+        region: us-east-1
   config:
     import:
       - aws-parameterstore:/config/spring-localstack_localstack/
+      - aws-secretsmanager:/secrets/spring-localstack_localstack
+
+
+
 
