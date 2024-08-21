@@ -22,7 +22,7 @@ Este repositório contém o código-fonte e exemplos relacionados à playlist do
 
 O projeto cobre a integração com as seguintes ferramentas da AWS:
 
-- **Parameter Store**: Gerenciamento de parâmetros e segredos.
+- **Parameter Store e Secret Manager**: Gerenciamento de parâmetros e segredos.
 - **SQS (Simple Queue Service)**: Serviço de filas de mensagens.
 - **SNS (Simple Notification Service)**: Serviço de notificação.
 - **Lambda**: Execução de funções em resposta a eventos.
